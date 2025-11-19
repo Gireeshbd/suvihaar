@@ -54,18 +54,12 @@ const Hero: React.FC = () => {
             onLoadedData={() => setIsVideoLoaded(true)}
             poster="https://framerusercontent.com/images/DlyprOzbumko92by18agLw8Vas.jpg"
         >
-            {/* 
-              Primary Source: User Provided Drive Link 
-              Added &confirm=t to bypass potential large file virus scan warnings 
-            */}
-            <source src="https://drive.google.com/uc?export=download&id=1p0BFLA0B4hbMKuTCqFpvqDeXxA1O8CZm&confirm=t" type="video/mp4" />
-            
-            {/* 
-              Fallback Source: High Quality Luxury Car Video from Coverr CDN.
-              This ensures something plays if the Drive link quota is exceeded.
-            */}
+            {/* Primary Source: Local video file from user */}
+            <source src="/hero-video.mp4" type="video/mp4" />
+
+            {/* Fallback Source: High Quality Luxury Car Video from Coverr CDN */}
             <source src="https://cdn.coverr.co/videos/coverr-driving-a-lamborghini-huracan-5647/1080p.mp4" type="video/mp4" />
-            
+
             Your browser does not support the video tag.
         </video>
       </motion.div>
